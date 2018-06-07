@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">My Restaurant</string>
+
+    <string name="url">"http://darewro.com/mobile/restaurant_mobile_services/"</string>
+    <string name="image_url">"http://www.darewro.com/assets/uploads/"</string>
+    <string name="no_connection">"No internet connection. Reconnect and try again"</string>
+    <string name="number_alert">"Not Valid Number"</string>
+
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+</resources>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#f7f7f7">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout"
+            android:clipToPadding="false"
+            android:layout_marginTop="8dp"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:text="Jaffar Hussain"
+                android:id="@+id/tvCustomerName"
+                android:background="#f7f7f7"
+                android:textColor="@color/ShipGray"
+                />
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/listView"
+                android:layout_gravity="center_horizontal"
+                android:divider="@android:color/transparent"
+                android:layout_below="@+id/tvCustomerName"
+                android:layout_marginTop="4dp"
+                android:dividerHeight="4dp" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/bill"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linearLayout"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/ShipGray"
+                android:textSize="14dp"
+                android:text="Total Bill: "
+                android:padding="4dp"
+                android:id="@+id/textView2"
+                android:background="#f7f7f7"
+                android:gravity="center" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/ShipGray"
+                android:textStyle="bold"
+                android:textSize="14dp"
+                android:text="--- RS"
+                android:padding="4dp"
+                android:id="@+id/price"
+                android:background="#f7f7f7"
+                android:gravity="center" />
+        </LinearLayout>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:id="@+id/btnOK"
+            android:textColor="@drawable/flat_btn_pressed"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_below="@+id/bill"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="24dp"
+            android:padding="8dp"/>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/progress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:background="@drawable/trending_gradient_shape"
+        android:layout_alignParentTop="true"
+        android:elevation="1dp">
+
+        <ProgressBar
+            android:id="@+id/pbProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tint="#ffffff">
+        </ProgressBar>
+    </LinearLayout>
+
+    <android.support.v7.widget.Toolbar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/toolbar"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:fitsSystemWindows="true"
+        android:minHeight="?attr/actionBarSize"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:background="?attr/colorPrimary"
+        android:elevation="10dp"
+        app:title="Process Order"
+        app:titleTextColor="@android:color/background_dark">
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="8dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="8dp"
+        android:background="#f7f7f7"
+        android:clipToPadding="false"
+        android:layout_below="@+id/toolbar">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:text="Jaffar Hussain"
+            android:id="@+id/tvCustomerName"
+            android:layout_centerHorizontal="true"
+            android:background="#f7f7f7"
+            android:textColor="@color/ShipGray"
+            />
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/listView"
+            android:layout_gravity="center_horizontal"
+            android:layout_below="@+id/tvCustomerName"
+            android:layout_above="@+id/bill"
+            android:layout_marginTop="4dp"
+            android:dividerHeight="1dp" />
+
+        <LinearLayout
+            android:id="@+id/bill"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/linearLayout"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/ShipGray"
+                android:textSize="14dp"
+                android:text="Total Bill: "
+                android:padding="4dp"
+                android:id="@+id/textView2"
+                android:background="#f7f7f7"
+                android:gravity="center" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/ShipGray"
+                android:textStyle="bold"
+                android:textSize="14dp"
+                android:text="--- RS"
+                android:padding="4dp"
+                android:id="@+id/price"
+                android:background="#f7f7f7"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout"
+            android:background="#f7f7f7"
+            android:layout_above="@+id/textView1"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:paddingBottom="4dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/ShipGray"
+                android:textSize="14dp"
+                android:text="Order on the name:"
+                android:id="@+id/textView"
+                android:background="#f7f7f7" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/etName"
+                android:inputType="textPersonName"
+                android:hint="name"
+                android:padding="10dp"
+                android:maxLength="70"
+                android:singleLine="true"
+                android:gravity="center"/>
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/ShipGray"
+            android:textSize="14dp"
+            android:text="Ready Timings in Minutes:"
+            android:paddingBottom="4dp"
+            android:paddingLeft="4dp"
+            android:id="@+id/textView1"
+            android:background="#f7f7f7"
+            android:gravity="center"
+            android:layout_above="@+id/linearLayout1"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout1"
+            android:background="#f7f7f7"
+            android:layout_above="@+id/btns"
+            android:padding="4dp">
+
+            <!--<Spinner-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="0.3"-->
+                <!--android:id="@+id/spTime"-->
+                <!--android:ems="10"-->
+                <!--/>-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/time20"
+                    android:layout_width="42dp"
+                    android:layout_height="38dp"
+                    android:text="20"
+                    android:background="@color/timeBTNDefault"
+                    android:layout_marginLeft="4dp"/>
+                <Button
+                    android:id="@+id/time40"
+                    android:layout_width="42dp"
+                    android:layout_height="38dp"
+                    android:text="40"
+                    android:background="@color/timeBTNDefault"
+                    android:layout_marginLeft="4dp"/>
+                <Button
+                    android:id="@+id/time60"
+                    android:layout_width="42dp"
+                    android:layout_height="38dp"
+                    android:text="60"
+                    android:background="@color/timeBTNDefault"
+                    android:layout_marginLeft="4dp"/>
+                <Button
+                    android:id="@+id/time120"
+                    android:layout_width="46dp"
+                    android:layout_height="38dp"
+                    android:text="120"
+                    android:background="@color/timeBTNDefault"
+                    android:layout_marginLeft="4dp"/>
+            </LinearLayout>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/etTime"
+                android:inputType="number"
+                android:hint="time"
+                android:padding="10dp"
+                android:maxLength="3"
+                android:singleLine="true"
+                android:gravity="center"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/btns">
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="Cancel"
+                android:textColor="#fff"
+                android:id="@+id/btnCancel"
+                android:background="@drawable/default_btn_pressed"
+                android:layout_marginRight="6dp"/>
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:textColor="#fff"
+                android:text="Place Order"
+                android:id="@+id/btnProcess"
+                android:background="@drawable/default_btn_pressed"
+                android:layout_marginLeft="6dp"/>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
